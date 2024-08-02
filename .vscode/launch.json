@@ -1,0 +1,18 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"cwd": "${workspaceFolder}/fe-clite-cx/",
+			"type": "node",
+			"request": "launch",
+			"name": "di18n debug",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}/packages/di18n-cli/bin/index.js",
+			"args": ["sync"],
+			"console": "integratedTerminal"
+		}
+	]
+}
