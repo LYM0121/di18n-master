@@ -25,11 +25,11 @@ function makeReplace({ value, variableObj, id }) {
         t.MemberExpression(t.Identifier('intl'), t.Identifier('get')),
         variableObj
           ? [typeof key === 'string' ? t.StringLiteral(key) : key, variableObj]
-          : [typeof key === 'string' ? t.StringLiteral(key) : key]
+          : [typeof key === 'string' ? t.StringLiteral(key) : key],
       ),
-      t.Identifier('d')
+      t.Identifier('d'),
     ),
-    [v]
+    [v],
   );
 }
 
@@ -91,7 +91,7 @@ function getPlugin(zhData, outObj) {
 
             node.left = t.MemberExpression(
               t.MemberExpression(t.Identifier('intl'), t.Identifier('options')),
-              t.Identifier('currentLocale')
+              t.Identifier('currentLocale'),
             );
             node.right = t.StringLiteral('en-US');
           }
@@ -113,7 +113,7 @@ function getPlugin(zhData, outObj) {
             // 处理掉 let { params, intl } = this.props; 中的 intl
             log.info('remove: this.props.intl');
             node.properties = node.properties.filter(
-              p => !p.value || p.value.name !== 'intl'
+              p => !p.value || p.value.name !== 'intl',
             );
           }
         },
@@ -124,7 +124,7 @@ function getPlugin(zhData, outObj) {
             outObj.needRewrite = true;
 
             const idNode = openingElement.attributes.find(
-              atr => atr.name.name === 'id'
+              atr => atr.name.name === 'id',
             );
 
             const id = idNode.value.value
@@ -132,7 +132,7 @@ function getPlugin(zhData, outObj) {
               : idNode.value.expression;
 
             const valuesNode = openingElement.attributes.find(
-              atr => atr.name.name === 'values'
+              atr => atr.name.name === 'values',
             );
             let callExpression;
 
@@ -173,7 +173,7 @@ function getPlugin(zhData, outObj) {
 
           const handleFormatMessageMethod = () => {
             const id = node.arguments[0].properties.find(
-              prop => prop.key.name === 'id'
+              prop => prop.key.name === 'id',
             ).value.value;
             outObj.needRewrite = true;
 
@@ -181,7 +181,7 @@ function getPlugin(zhData, outObj) {
 
             if (node.arguments.length === 1) {
               path.replaceWith(
-                makeReplace({ value: zhData[id] || 'TBD', id: id })
+                makeReplace({ value: zhData[id] || 'TBD', id: id }),
               );
             } else {
               path.replaceWith(
@@ -189,7 +189,7 @@ function getPlugin(zhData, outObj) {
                   value: zhData[id] || 'TBD',
                   id: id,
                   variableObj: node.arguments[1],
-                })
+                }),
               );
             }
           };

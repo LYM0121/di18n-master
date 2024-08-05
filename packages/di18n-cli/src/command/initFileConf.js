@@ -73,9 +73,9 @@ module.exports = async function initFileConf(isVue) {
         parser: 'babel',
         singleQuote: true,
         trailingComma: 'es5',
-      }
+      },
     ),
-    'utf8'
+    'utf8',
   );
 
   let createTasks = [];

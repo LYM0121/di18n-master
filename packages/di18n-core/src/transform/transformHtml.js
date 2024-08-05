@@ -130,7 +130,7 @@ function traverseHtml(ast, {
         i18nObject: '',
         i18nMethod,
         importCode: '',
-      }
+      },
     );
 
     if (!hasTouch) return source;

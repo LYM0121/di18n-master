@@ -50,7 +50,7 @@ function transformVueAdapter(
   allTranslatedWord,
   updatedTranslatedWord,
   keysInUse,
-  option
+  option,
 ) {
   const { filePath, currentEntry, currentOutput } = codeFileInfo;
   const sourceCode = fs.readFileSync(filePath, 'utf8');
@@ -62,7 +62,7 @@ function transformVueAdapter(
       allUpdated: updatedTranslatedWord,
       allUsedKeys: keysInUse,
     },
-    option
+    option,
   );
 
   if (!option.extractOnly && hasTouch) {

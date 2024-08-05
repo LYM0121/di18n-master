@@ -21,7 +21,7 @@ async function syncOneNonChineseLocalesConf(
   chineseLocales,
   updatedTranslatedWord,
   publish,
-  confService
+  confService,
 ) {
   const confName = key;
   const { disableAutoTranslate, translator } = option;
@@ -96,7 +96,7 @@ async function syncOneNonChineseLocalesConf(
     confName,
     mergedLocales,
     chineseLocales,
-    key
+    key,
   );
   if (updateConfRes.code !== 0) {
     log.error(`update conf ${confName} fail, ${res.message}`);
@@ -135,7 +135,7 @@ async function syncNonChineseLocalesConf(
   updatedTranslatedWord,
   option,
   publish,
-  confService
+  confService,
 ) {
   const { primaryLocale, supportedLocales } = option;
 
@@ -147,14 +147,13 @@ async function syncNonChineseLocalesConf(
       chineseLocales,
       updatedTranslatedWord,
       publish,
-      confService
+      confService,
     ));
 
   const nonChineseLocales = await Promise.all(syncTasks);
 
   return nonChineseLocales;
 }
-
 
 /**
  * 收集源码中的中文字符
@@ -242,7 +241,7 @@ async function collectChineseWords(option, publish, notEditCode, confService) {
 
   const allTranslatedWordKeysCount = Object.keys(allTranslatedWord).reduce(
     (prev, cur) => prev + allTranslatedWord[cur].length,
-    0
+    0,
   );
   const allLocalesKeyCount = Object.keys(localeResouce).length;
   const allTranstedInUseCount = allTranslatedWordKeysCount - unusedKeys.length;
@@ -261,7 +260,7 @@ async function collectChineseWords(option, publish, notEditCode, confService) {
     zhConfName,
     localeResouce,
     {},
-    'zh-CN'
+    'zh-CN',
   );
 
   if (updateConfRes.code !== 0) {
@@ -276,7 +275,7 @@ async function collectChineseWords(option, publish, notEditCode, confService) {
     updatedTranslatedWord,
     option,
     publish,
-    confService
+    confService,
   );
 
   // XXX: 英文 publish 也放到这里
