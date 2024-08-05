@@ -8,11 +8,10 @@ export default function Demo(props) {
         暂无标签，请
         <span
           style={{ fontWeight: 'bold', margin: '0 5px' }}
-          onClick={() => console.log('xxxxx')}
-        >
+          onClick={() => console.log('xxxxx')}>
           添加
         </span>
-        然后 <Title name={intl.t('新的文案')}>刷新页面</Title>
+        然后 <Title name="新的文案">刷新页面</Title>
       </Di18nTrans>
     </div>
   );

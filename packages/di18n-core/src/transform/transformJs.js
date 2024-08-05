@@ -103,8 +103,8 @@ function makeVisitor({
         ObjectPropertyArr.push(
           t.ObjectProperty(
             t.Identifier(k),
-            obj[k].isAstNode ? obj[k].value : t.Identifier(obj[k]),
-          ),
+            obj[k].isAstNode ? obj[k].value : t.Identifier(obj[k])
+          )
         );
       });
       return t.ObjectExpression(ObjectPropertyArr);
@@ -146,15 +146,15 @@ function makeVisitor({
       return t.callExpression(
         t.memberExpression(
           t.identifier(i18nObject),
-          t.identifier(i18nMethod),
+          t.identifier(i18nMethod)
         ),
-        objExp ? [v, objExp] : [v],
+        objExp ? [v, objExp] : [v]
       );
     }
 
     return t.callExpression(
       t.identifier(i18nMethod),
-      objExp ? [v, objExp] : [v],
+      objExp ? [v, objExp] : [v]
     );
   }
 
@@ -205,7 +205,7 @@ function makeVisitor({
 
         if (needReplace && value.trim()) {
           path.replaceWith(
-            makeReplace(value, variable),
+            makeReplace(value, variable)
           );
         }
       }
@@ -216,13 +216,13 @@ function makeVisitor({
       const { node } = path;
       const { value } = node;
 
-      const isTsLiteralType = node.type === 'StringLiteral' && (['TSLiteralType', 'TSEnumMember'].includes(path.parent.type));
+      const isTsLiteralType = node.type === 'StringLiteral' && (['TSLiteralType', 'TSEnumMember'].includes(path.parent.type))
       if (!shouldIgnore(node) && isPrimary(node.value) && !isTsLiteralType) {
         switch (path.parent.type) {
           case 'ObjectProperty':
           case 'AssignmentExpression':
             path.replaceWith(
-              makeReplace(value),
+              makeReplace(value)
             );
             break;
           case 'CallExpression':
@@ -234,7 +234,7 @@ function makeVisitor({
             }
 
             path.replaceWith(
-              makeReplace(v),
+              makeReplace(v)
             );
             break;
           case 'NewExpression':
@@ -253,14 +253,14 @@ function makeVisitor({
             } else {
               path.replaceWith(
                 t.JSXExpressionContainer(
-                  makeReplace(value),
-                ),
+                  makeReplace(value)
+                )
               );
             }
             break;
           default:
             path.replaceWith(
-              makeReplace(value),
+              makeReplace(value)
             );
             break;
         }
@@ -334,7 +334,7 @@ function makeVisitor({
         if (allUpdated.hasOwnProperty(key)) {
           // 如果对应的中文已经在远端被修改，则自动更新代码
           path.replaceWith(
-            makeReplace(allUpdated[key], variable),
+            makeReplace(allUpdated[key], variable)
           );
         } else {
           if (Array.isArray(node.arguments) && node.arguments.length > 0) {
@@ -407,8 +407,8 @@ function makeVisitor({
         // 将中文替换为 JSX 表达式
         path.replaceWith(
           t.JSXExpressionContainer(
-            makeReplace(node.value),
-          ),
+            makeReplace(node.value)
+          )
         );
       }
 

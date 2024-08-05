@@ -1,4 +1,3 @@
-import { intl } from 'di18n-react';
 /* di18n-disable */
 import React from 'react';
 
@@ -23,13 +22,8 @@ func(
 );
 
 function A() {
-  const t = intl.t('注释忽略翻译');
-  return (
-    <div>
-      {intl.t('注释忽略翻译')}
-      {t}
-    </div>
-  );
+  const t = '注释忽略翻译';
+  return <div>注释忽略翻译 { t }</div>
 }
 
 export default Demo;

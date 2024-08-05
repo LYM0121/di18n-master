@@ -110,7 +110,7 @@ function traversePug(ast, {
         i18nObject: '',
         i18nMethod,
         importCode: '',
-      },
+      }
     );
 
     let code = prettier.format(source1, {

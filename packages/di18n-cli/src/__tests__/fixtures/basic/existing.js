@@ -18,7 +18,7 @@ export default function Test() {
   return (
     <>
       {/* this is a comment in JSX */}
-      <Button>{intl.t('标题')}</Button>
+      <Button>标题</Button>
       <Button>{intl.t('标题', 'SUMMARY')}</Button>
 
       <Button>{intl.t('新建')}</Button>

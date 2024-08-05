@@ -1,5 +1,3 @@
-import { intl } from 'di18n-react';
-
 const rootPath = require('./rootPath');
 const collect = require('../command/collect');
 
@@ -8,7 +6,7 @@ const testConfig = {
 };
 
 test('it should ignore components specified in ignoreComponents', () => {
-  return collect(testConfig).then((res) => {
+  return collect(testConfig).then(res => {
     // 应该包含两个语言的资源
     expect(res.length).toBe(2);
 
@@ -25,7 +23,7 @@ test('it should ignore components specified in ignoreComponents', () => {
 });
 
 test('it should ingore lines marked by comment di18n-disable(-line)', () => {
-  return collect(testConfig).then((res) => {
-    expect(res[0].locales[intl.t('注释忽略翻译')]).toBe(intl.t('注释忽略翻译'));
+  return collect(testConfig).then(res => {
+    expect(res[0].locales['注释忽略翻译']).toBe('注释忽略翻译');
   });
 });

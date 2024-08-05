@@ -1,39 +1,35 @@
 <template lang="pug">
 .app
-  img(:src='logo')
+  img(:src="logo")
   h1 Vue-di18n
   p Happly coding here ~
   div
     // di18n-disable
-    button(@click='changeLocale("zh-CN")') 中文
+    button(@click="changeLocale('zh-CN')") 中文
     // di18n-enable
-    button(@click='changeLocale("en-US")') English
-  p {{ t('中文') }}
-  p {{ t('哈哈哈哈') }}
-  button(disabled) {{ t('禁用按钮') }}
+    button(@click="changeLocale('en-US')") English
+  p 中文
+  p 哈哈哈哈
+  button(disabled) 禁用按钮
 </template>
-
 <script>
-import { intl } from 'di18n-react';
-
-import Logo from './EFE-logo.png';
+import Logo from './EFE-logo.png'
 
 export default {
   name: 'app',
   data() {
     return {
       logo: Logo,
-      name: intl.t('中文'),
-    };
+      name: '中文'
+    }
   },
   methods: {
     changeLocale(locale) {
-      this.$i18n.locale = locale;
-    },
-  },
-};
+      this.$i18n.locale = locale
+    }
+  }
+}
 </script>
-
 <style lang="less" scoped>
 html {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',

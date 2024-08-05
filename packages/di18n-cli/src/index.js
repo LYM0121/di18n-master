@@ -44,6 +44,7 @@ program
     console.log();
   });
 
+
 // XXX: 不表意，需要改一下
 program
   .command('convert')
@@ -56,7 +57,6 @@ program
     console.log('  Examples:');
     console.log();
     console.log('    $ di18n convert -c ./config/prod.config.js');
-    console.log();
     console.log();
   });
 

@@ -3,5 +3,3 @@ exports.transformReactIntlUniveralToDi18n = require('./transform/transformReactI
 exports.transformZeroToDi18n = require('./transform/transformZeroToDi18n');
 exports.transformToDi18n = require('./transform/transformToDi18n');
 exports.googleTranslate = require('./translate/google');
-
-console.log();

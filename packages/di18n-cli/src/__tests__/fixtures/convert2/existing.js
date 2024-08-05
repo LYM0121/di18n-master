@@ -4,7 +4,7 @@ import React from 'react';
 export default function Test() {
   return (
     <div>
-      <Button>{intl.get('app.i18n.dfjeifjeife').d(intl.t('联系人'))}</Button>
+      <Button>{intl.get('app.i18n.dfjeifjeife').d('联系人')}</Button>      
     </div>
   );
 }

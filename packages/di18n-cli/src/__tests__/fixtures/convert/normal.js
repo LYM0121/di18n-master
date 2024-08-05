@@ -16,11 +16,11 @@ export default function Test() {
   let data = [
     {
       value: buildFailCount,
-      name: intl.get('intl.chart.build.fail').d(intl.t('失败')),
+      name: intl.get('intl.chart.build.fail').d('失败'),
     },
     {
       value: buildSuccessCount,
-      name: intl.get('intl.chart.build.success').d(intl.t('成功')),
+      name: intl.get('intl.chart.build.success').d('成功'),
     },
   ];
 

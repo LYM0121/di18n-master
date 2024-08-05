@@ -26,7 +26,7 @@ function getPlugin(outObj, allConverted, intlAlias = 'intl') {
 
     return t.CallExpression(
       t.MemberExpression(t.Identifier(intlAlias), t.Identifier('t')),
-      variableObj ? [v, variableObj] : [v],
+      variableObj ? [v, variableObj] : [v]
     );
   }
 

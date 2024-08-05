@@ -87,7 +87,7 @@ module.exports = function transformVue(source, localeInfo = {}, options = {}) {
           ignoreComponents,
           ignoreMethods,
           pkMap,
-        },
+        }
       );
 
       template.content = ret.source;
@@ -115,7 +115,7 @@ module.exports = function transformVue(source, localeInfo = {}, options = {}) {
         babelPlugins,
         ignoreComponents,
         ignoreMethods,
-      },
+      }
     );
 
     script.content = ret.source;
