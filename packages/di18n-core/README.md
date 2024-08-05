@@ -1,1 +1,1 @@
-# di18n-core
+# sf18n-core
