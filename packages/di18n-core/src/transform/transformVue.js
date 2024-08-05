@@ -1,4 +1,4 @@
-const compiler = require('vue-template-compiler');
+// const compiler = require('vue-template-compiler');
 const transformJs = require('./transformJs');
 const transformPug = require('./transformPug');
 const transformHtml = require('./transformHtml');
@@ -53,10 +53,12 @@ module.exports = function transformVue(source, localeInfo = {}, options = {}) {
     pkMap = {},
   } = options;
 
-  const sfc = compiler.parseComponent(source, {
-    pad: 'space',
-    deindent: false,
-  });
+  // TODOLYM:兼容react 去除Vue相关包
+  // const sfc = compiler.parseComponent(source, {
+  //   pad: 'space',
+  //   deindent: false,
+  // });
+  const sfc = null;
 
   const { template, script, styles, customBlocks } = sfc;
   let hasTouch = false;

@@ -31,8 +31,5 @@
     "pug-lexer": "^4.1.0",
     "pug-parser": "^5.0.1",
     "pug-source-gen": "0.0.2"
-  },
-  "peerDependencies": {
-    "vue-template-compiler": "> ^2.5.16"
   }
 }
