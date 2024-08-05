@@ -57,6 +57,7 @@ program
     console.log();
     console.log('    $ di18n convert -c ./config/prod.config.js');
     console.log();
+    console.log();
   });
 
 program
