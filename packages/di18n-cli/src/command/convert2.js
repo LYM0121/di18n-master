@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { transformReactIntlUniveralToDi18n } = require('di18n-core');
+const { transformReactIntlUniveralToDi18n } = require('sf18n-core');
 const mergeOptions = require('../utils/mergeOptions');
 const log = require('../utils/log');
 

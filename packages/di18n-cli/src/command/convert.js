@@ -1,4 +1,4 @@
-const { transformReactIntlToReactIntlUniversal } = require('di18n-core');
+const { transformReactIntlToReactIntlUniversal } = require('sf18n-core');
 const mergeOptions = require('../utils/mergeOptions');
 const log = require('../utils/log');
 

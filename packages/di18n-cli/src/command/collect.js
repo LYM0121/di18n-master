@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const { transformZeroToDi18n } = require('di18n-core');
+const { transformZeroToDi18n } = require('sf18n-core');
 const mergeOptions = require('../utils/mergeOptions');
 const isChinese = require('../utils/isChinese');
 const log = require('../utils/log');
