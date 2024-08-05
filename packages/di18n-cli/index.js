@@ -14,6 +14,7 @@ program
     console.log();
     console.log('    $ di18n init -c ./config/prod.config.js');
     console.log();
+    console.log('重新发布');
   });
 
 program.command('*').action(function(cmd) {
