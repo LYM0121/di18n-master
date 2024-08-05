@@ -1,6 +1,6 @@
 {
   "name": "sf18n-core",
-  "version": "0.1.38",
+  "version": "0.1.39",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
