@@ -29,3 +29,5 @@ $ npx sf18n sync
 ```
 $ npx sf18n publish
 ```
+
+> 无效注释，为重新上传包
