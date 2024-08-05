@@ -272,5 +272,4 @@ module.exports = function transformHtml(source, localeInfo = {}, options = {}) {
   code = r.hasTouch ? code : source;
 
   return { source: code, hasTouch: r.hasTouch };
-  console.log('重新发布');
 };
