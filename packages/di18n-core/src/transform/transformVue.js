@@ -42,7 +42,7 @@ module.exports = function transformVue(source, localeInfo = {}, options = {}) {
   } = localeInfo;
 
   const {
-    primaryRegx = /[\u4e00-\u9fa5]/,
+    primaryRegx = /[\u4e00-\u9fa5]|￥/,
     i18nObject = 'intl',
     i18nMethod = '$t',
     importCode = "import { intl } from 'di18n-vue';",

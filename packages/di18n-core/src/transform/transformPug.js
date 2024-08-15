@@ -217,7 +217,7 @@ module.exports = function transformPug(source, localeInfo = {}, options = {}) {
   } = localeInfo;
 
   const {
-    primaryRegx = /[\u4e00-\u9fa5]/,
+    primaryRegx = /[\u4e00-\u9fa5]|￥/,
     i18nMethod = '$t',
 
     /* 以下暂时不需要

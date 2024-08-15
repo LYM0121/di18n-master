@@ -34,7 +34,7 @@ module.exports = {
   ignoreMethods: [],
 
   // XXX: json loose
-  // primaryRegx: /[\u4e00-\u9fa5]/,
+  // primaryRegx: /[\u4e00-\u9fa5]|￥/,
 
   // primary locale, <string>
   // e.g. 'zh-CN'

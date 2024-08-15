@@ -2,7 +2,7 @@ const t = require('@babel/types');
 const log = require('../utils/log');
 
 const isChinese = function(text) {
-  return /[\u4e00-\u9fa5]/.test(text);
+  return /[\u4e00-\u9fa5]|￥/.test(text);
 };
 
 /**
